@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text.RegularExpressions;
 
 namespace Validation
 {
@@ -7,7 +6,9 @@ namespace Validation
     {
         static void Main(string[] args)
         {
-            var result = IsMobileValid(string.Empty);
+            var mobileValidation = new ValidationService();
+
+            var result = mobileValidation.IsMobileValid("07854321232");
 
             Console.WriteLine(result);
         }
