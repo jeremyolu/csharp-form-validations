@@ -4,7 +4,7 @@ using Validation;
 namespace Tests
 {
     [TestFixture]
-    public class ValidationTests
+    public class MobileValidationTests
     {
         private ValidationService _validationService;
 
