@@ -6,11 +6,17 @@ namespace Validation
     {
         static void Main(string[] args)
         {
-            var mobileValidation = new ValidationService();
+            var validationService = new ValidationService();
 
-            var result = mobileValidation.IsMobileValid("07854321232");
+            var mobile = "07865423210";
+            var email = "rosemaryallan@live.com";
 
-            Console.WriteLine(result);
+            var mobileResult = validationService.IsMobileValid(mobile);
+            var emailResult = validationService.IsEmailValid(email);
+
+            Console.WriteLine($"Mobile: {mobile} - Valid: {mobileResult}");
+            Console.WriteLine($"Email: {email} - Valid: {emailResult}");
         }
+        
     }
 }
