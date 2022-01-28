@@ -4,6 +4,25 @@ namespace Validation
 {
     public class ValidationService
     {
+        private Helpers _helpers;
+
+        public ValidationService()
+        {
+            _helpers = new Helpers();
+        }
+
+        public string IsFieldValid(string value, string validationMessage)
+        {
+            // if valid return empty string else return validation message
+            return _helpers.IsValueEntered(value) == true ? string.Empty : validationMessage;
+        }
+
+        public string IsFieldValid(int value, string validationMessage)
+        {
+            // if valid return empty string else return validation message
+            return _helpers.IsValueEntered(value) == true ? string.Empty : validationMessage;
+        }
+
         public bool IsMobileValid(string mobileTel)
         {
             // serialize number to remove any characters

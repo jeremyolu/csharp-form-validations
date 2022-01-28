@@ -6,6 +6,7 @@ namespace Validation
     {
         static void Main(string[] args)
         {
+            /*
             var validationService = new ValidationService();
 
             var validMobile = "07865423210";
@@ -25,6 +26,19 @@ namespace Validation
 
             Console.WriteLine($"Mobile: {inValidMobile} - Invalid: {inValidMobileResult}");
             Console.WriteLine($"Email: {inValidEmail} - Invalid: {inValidEmailResult}");
+
+            */
+
+            var result = IsRequired("", "insertmessage");
+
+            Console.WriteLine(result);
+        }
+
+        static string IsRequired(string value, string validationMessage)
+        {
+            var helper = new Helpers();
+
+            return helper.IsValueEntered(value) == true ? string.Empty : validationMessage;
         }
     }
 }
